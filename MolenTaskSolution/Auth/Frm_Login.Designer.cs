@@ -1,6 +1,6 @@
 ﻿namespace MolenTaskSolution.Auth
 {
-    partial class Frm_Login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loginlabel = new System.Windows.Forms.Label();
+            this.labelemail = new System.Windows.Forms.Label();
+            this.textBoxemail = new System.Windows.Forms.TextBox();
+            this.labelpassword = new System.Windows.Forms.Label();
+            this.textBoxpassword = new System.Windows.Forms.TextBox();
+            this.btnlogin = new System.Windows.Forms.Button();
+            this.btncancel = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MolenTaskSolution.Properties.Resources.de_molen;
+            this.pictureBox1.Location = new System.Drawing.Point(180, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // loginlabel
+            // 
+            this.loginlabel.AutoSize = true;
+            this.loginlabel.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.loginlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.loginlabel.Location = new System.Drawing.Point(137, 91);
+            this.loginlabel.Name = "loginlabel";
+            this.loginlabel.Size = new System.Drawing.Size(155, 45);
+            this.loginlabel.TabIndex = 1;
+            this.loginlabel.Text = "LOG IN";
+            // 
+            // labelemail
+            // 
+            this.labelemail.AutoSize = true;
+            this.labelemail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelemail.Location = new System.Drawing.Point(32, 165);
+            this.labelemail.Name = "labelemail";
+            this.labelemail.Size = new System.Drawing.Size(68, 19);
+            this.labelemail.TabIndex = 2;
+            this.labelemail.Text = "E-MAIL";
+            // 
+            // textBoxemail
+            // 
+            this.textBoxemail.Font = new System.Drawing.Font("Adobe Garamond Pro", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.textBoxemail.Location = new System.Drawing.Point(161, 162);
+            this.textBoxemail.Name = "textBoxemail";
+            this.textBoxemail.Size = new System.Drawing.Size(212, 22);
+            this.textBoxemail.TabIndex = 3;
+            this.textBoxemail.Text = "Please enter your email";
+            // 
+            // labelpassword
+            // 
+            this.labelpassword.AutoSize = true;
+            this.labelpassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelpassword.Location = new System.Drawing.Point(32, 197);
+            this.labelpassword.Name = "labelpassword";
+            this.labelpassword.Size = new System.Drawing.Size(104, 19);
+            this.labelpassword.TabIndex = 4;
+            this.labelpassword.Text = "PASSWORD";
+            // 
+            // textBoxpassword
+            // 
+            this.textBoxpassword.Font = new System.Drawing.Font("Adobe Garamond Pro", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.textBoxpassword.Location = new System.Drawing.Point(161, 194);
+            this.textBoxpassword.Name = "textBoxpassword";
+            this.textBoxpassword.Size = new System.Drawing.Size(212, 22);
+            this.textBoxpassword.TabIndex = 5;
+            this.textBoxpassword.Text = "Please enter your password";
+            // 
+            // btnlogin
+            // 
+            this.btnlogin.Location = new System.Drawing.Point(298, 243);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(75, 23);
+            this.btnlogin.TabIndex = 6;
+            this.btnlogin.Text = "Login";
+            this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
+            // 
+            // btncancel
+            // 
+            this.btncancel.Location = new System.Drawing.Point(217, 243);
+            this.btncancel.Name = "btncancel";
+            this.btncancel.Size = new System.Drawing.Size(75, 23);
+            this.btncancel.TabIndex = 7;
+            this.btncancel.Text = "Cancel";
+            this.btncancel.UseVisualStyleBackColor = true;
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(410, 359);
+            this.Controls.Add(this.btncancel);
+            this.Controls.Add(this.btnlogin);
+            this.Controls.Add(this.textBoxpassword);
+            this.Controls.Add(this.labelpassword);
+            this.Controls.Add(this.textBoxemail);
+            this.Controls.Add(this.labelemail);
+            this.Controls.Add(this.loginlabel);
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "Login";
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.btnLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private PictureBox pictureBox1;
+        private Label loginlabel;
+        private Label labelemail;
+        private TextBox textBoxemail;
+        private Label labelpassword;
+        private TextBox textBoxpassword;
+        private Button btnlogin;
+        private Button btncancel;
     }
 }
