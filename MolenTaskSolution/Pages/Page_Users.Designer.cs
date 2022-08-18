@@ -1,6 +1,6 @@
 ﻿namespace MolenTaskSolution.Pages
 {
-    partial class Page_Employee
+    partial class Page_Users
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Page_Users
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "Page_Users";
+            this.Size = new System.Drawing.Size(1277, 785);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
