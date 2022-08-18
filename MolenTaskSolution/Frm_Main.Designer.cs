@@ -40,21 +40,21 @@
             this.accountStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbUserRole = new System.Windows.Forms.Label();
+            this.lbUserName = new System.Windows.Forms.Label();
+            this.pbUser = new System.Windows.Forms.PictureBox();
             this.lbcopyrght = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pbUser = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.AutoSize = false;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.projectToolStripMenuItem,
@@ -62,9 +62,9 @@
             this.usersToolStripMenuItem,
             this.accountStripMenuItem1});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(3, 23);
+            this.menuStrip1.Location = new System.Drawing.Point(7, 357);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(298, 211);
+            this.menuStrip1.Size = new System.Drawing.Size(283, 206);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -157,15 +157,48 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Controls.Add(this.menuStrip1);
+            this.panel1.Controls.Add(this.lbUserRole);
+            this.panel1.Controls.Add(this.lbUserName);
             this.panel1.Controls.Add(this.pbUser);
             this.panel1.Controls.Add(this.lbcopyrght);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 767);
             this.panel1.TabIndex = 1;
+            // 
+            // lbUserRole
+            // 
+            this.lbUserRole.AutoSize = true;
+            this.lbUserRole.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbUserRole.Location = new System.Drawing.Point(119, 174);
+            this.lbUserRole.Name = "lbUserRole";
+            this.lbUserRole.Size = new System.Drawing.Size(60, 23);
+            this.lbUserRole.TabIndex = 3;
+            this.lbUserRole.Text = "Admin";
+            // 
+            // lbUserName
+            // 
+            this.lbUserName.AutoSize = true;
+            this.lbUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbUserName.Location = new System.Drawing.Point(63, 143);
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Size = new System.Drawing.Size(180, 31);
+            this.lbUserName.TabIndex = 3;
+            this.lbUserName.Text = "Ramazan Bulbul";
+            // 
+            // pbUser
+            // 
+            this.pbUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbUser.Image = ((System.Drawing.Image)(resources.GetObject("pbUser.Image")));
+            this.pbUser.Location = new System.Drawing.Point(86, 12);
+            this.pbUser.Name = "pbUser";
+            this.pbUser.Size = new System.Drawing.Size(128, 128);
+            this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUser.TabIndex = 3;
+            this.pbUser.TabStop = false;
             // 
             // lbcopyrght
             // 
@@ -197,25 +230,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.menuStrip1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 271);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(304, 237);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // pbUser
-            // 
-            this.pbUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbUser.Location = new System.Drawing.Point(12, 12);
-            this.pbUser.Name = "pbUser";
-            this.pbUser.Size = new System.Drawing.Size(111, 92);
-            this.pbUser.TabIndex = 3;
-            this.pbUser.TabStop = false;
-            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -231,7 +245,6 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
             this.ResumeLayout(false);
 
@@ -253,7 +266,8 @@
         private Label lbcopyrght;
         private Label label3;
         private Label label1;
-        private GroupBox groupBox1;
         private PictureBox pbUser;
+        private Label lbUserRole;
+        private Label lbUserName;
     }
 }
