@@ -10,11 +10,33 @@ using System.Windows.Forms;
 
 namespace MolenTaskSolution.Auth
 {
-    public partial class Frm_Login : Form
+    public partial class Login : Form
     {
-        public Frm_Login()
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+          
+
+
         }
     }
 }
