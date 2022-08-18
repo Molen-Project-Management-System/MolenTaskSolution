@@ -60,11 +60,14 @@
   <metadata name="errorProviderApp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>47</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAxhJREFUWEftl01PE1EUhguKCU06Loxrt/4EfwStUDQxIrSDEYhLfwiwFwSjCWCC
+        DwAACw8BkvkDpQAAAxhJREFUWEftl01PE1EUhguKCU06Loxrt/4EfwStUDQxIrSDEYhLfwiwFwSjCWCC
         KxcEjShyR9REBXXjjha0BSmdoGhhOsf33HtbOuWjn+BCTvLknM7HOW/PPZ079Z3Yzssu6X9Pd/hcEfWR
         Zea9B8Eex+HZOHZ1XLPFhoMN65NXGvXHkobiDdpLarLYUFAmY9ue6fTj2xroQADei2AfPasvRWFTCpad
         QcdqssdtF5s2n1wbQNIEitsgjdj2IMwN+C20XUDIeb4Pn09JL5enhuVYGmoZoPluonc3Sfo3B/DaJFrs
@@ -83,7 +86,7 @@
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAA6ZJREFUWEftll1sU2UcxguiEkiIiBhMNBGIWZTgBfHKhIxd6C2EGCQkKBKjF8R4
+        EAAACxABrSO9dQAAA6ZJREFUWEftll1sU2UcxguiEkiIiBhMNBGIWZTgBfHKhIxd6C2EGCQkKBKjF8R4
         wZ0bHpDxFRjMryEhQSfECeuytdJtbLLObYzTj9XDUh2sZWyMdmX9PPR0p6cf5/F/xgvW7mx0Mu76JL+k
         6fue//P0vB//GoqajTpPdz7Hn+x499q37TtuHG/dOnK0+U3/4Yvz2PCTU915W0njud7zl37sTnWd7oSj
         5jLcX7fhZlULfEcsw8ED5s+j+01Ps+lzq+/Nru1nGhzyhXo7BN6L8ZEQpGAc0lgMEWEEvnO98B2+iHCl
