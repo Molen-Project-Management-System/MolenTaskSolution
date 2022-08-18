@@ -1,8 +1,8 @@
 namespace MolenTaskSolution
 {
-    public partial class Form1 : Form
+    public partial class Frm_Main : Form
     {
-        public Form1()
+        public Frm_Main()
         {
             InitializeComponent();
         }
