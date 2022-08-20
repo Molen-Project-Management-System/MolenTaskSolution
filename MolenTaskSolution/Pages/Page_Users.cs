@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MolenTaskSolution.Pages
 {
-    public partial class Page_FileAttachment : UserControl
+    public partial class Page_Users : UserControl
     {
-        public Page_FileAttachment()
+        public Page_Users()
         {
             InitializeComponent();
         }

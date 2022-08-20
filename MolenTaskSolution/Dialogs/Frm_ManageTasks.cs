@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MolenTaskSolution.Pages
+namespace MolenTaskSolution.Dialogs
 {
-    public partial class Page_Employee : UserControl
+    public partial class Frm_ManageTasks : Form
     {
-        public Page_Employee()
+        public Frm_ManageTasks()
         {
             InitializeComponent();
         }

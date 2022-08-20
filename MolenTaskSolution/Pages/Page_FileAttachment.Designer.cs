@@ -1,6 +1,6 @@
 ﻿namespace MolenTaskSolution.Pages
 {
-    partial class UserControl1
+    partial class Page_FileAttachment
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // UserControl1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(681, 487);
-            this.ResumeLayout(false);
-
         }
 
         #endregion
