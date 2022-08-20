@@ -157,7 +157,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1578, 849);
+            this.listView1.Size = new System.Drawing.Size(1789, 849);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -249,7 +249,7 @@
             this.groupBox1.Controls.Add(this.lbPageName);
             this.groupBox1.Location = new System.Drawing.Point(302, 783);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1276, 66);
+            this.groupBox1.Size = new System.Drawing.Size(1487, 66);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navigate";
@@ -299,7 +299,7 @@
             this.lbPageName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPageName.AutoSize = true;
             this.lbPageName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbPageName.Location = new System.Drawing.Point(1138, 31);
+            this.lbPageName.Location = new System.Drawing.Point(1349, 31);
             this.lbPageName.Name = "lbPageName";
             this.lbPageName.Size = new System.Drawing.Size(126, 20);
             this.lbPageName.TabIndex = 3;
@@ -309,14 +309,14 @@
             // 
             this.page_Task1.Location = new System.Drawing.Point(302, 0);
             this.page_Task1.Name = "page_Task1";
-            this.page_Task1.Size = new System.Drawing.Size(1276, 785);
+            this.page_Task1.Size = new System.Drawing.Size(1497, 785);
             this.page_Task1.TabIndex = 3;
             // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1578, 849);
+            this.ClientSize = new System.Drawing.Size(1789, 849);
             this.Controls.Add(this.page_Task1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
