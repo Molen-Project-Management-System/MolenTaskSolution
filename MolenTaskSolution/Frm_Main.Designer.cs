@@ -40,13 +40,13 @@
             this.accountStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMainLogin = new System.Windows.Forms.Button();
             this.lbUserRole = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.pbUser = new System.Windows.Forms.PictureBox();
             this.lbcopyrght = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMainLogin = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
@@ -174,6 +174,16 @@
             this.panel1.Size = new System.Drawing.Size(269, 575);
             this.panel1.TabIndex = 1;
             // 
+            // btnMainLogin
+            // 
+            this.btnMainLogin.Location = new System.Drawing.Point(66, 489);
+            this.btnMainLogin.Name = "btnMainLogin";
+            this.btnMainLogin.Size = new System.Drawing.Size(79, 28);
+            this.btnMainLogin.TabIndex = 4;
+            this.btnMainLogin.Text = "LOGOUT";
+            this.btnMainLogin.UseVisualStyleBackColor = true;
+            this.btnMainLogin.Click += new System.EventHandler(this.btnMainLogin_Click);
+            // 
             // lbUserRole
             // 
             this.lbUserRole.AutoSize = true;
@@ -236,16 +246,6 @@
             this.label1.Size = new System.Drawing.Size(243, 2);
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
-            // 
-            // btnMainLogin
-            // 
-            this.btnMainLogin.Location = new System.Drawing.Point(22, 206);
-            this.btnMainLogin.Name = "btnMainLogin";
-            this.btnMainLogin.Size = new System.Drawing.Size(79, 28);
-            this.btnMainLogin.TabIndex = 4;
-            this.btnMainLogin.Text = "LOGIN";
-            this.btnMainLogin.UseVisualStyleBackColor = true;
-            this.btnMainLogin.Click += new System.EventHandler(this.btnMainLogin_Click);
             // 
             // Frm_Main
             // 
