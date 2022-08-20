@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using MolenTaskSolution.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace MolenTaskSolution.Auth
 {
     public partial class Login : Form
     {
+
+        molendbContext userdb = new molendbContext();
         public Login()
         {
             InitializeComponent();
@@ -34,7 +38,24 @@ namespace MolenTaskSolution.Auth
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+
           
+
+            List<ProjectUser>projectUsers=userdb.ProjectUsers.ToList();
+
+           foreach (ProjectUser user in projectUsers)
+            {
+                if (textBoxemail.Text == user.Email && textBoxpassword.Text == user.Password)
+                {
+                    new Frm_Main().Show();
+                    this.Close();
+
+                }
+                else MessageBox.Show("Please enter valid email and password");
+
+            }
+
+           
 
 
         }
