@@ -21,7 +21,7 @@ namespace MolenTaskSolution.Models
         public DateTime? CompletionDate { get; set; }
         public DateTime? DateAdded { get; set; }
 
-        public virtual ProjectUser? ProjectOwner { get; set; }
+        public virtual User? ProjectOwner { get; set; }
         public virtual ICollection<FileAttachment> FileAttachments { get; set; }
         public virtual ICollection<Task> Tasks { get; set; }
     }

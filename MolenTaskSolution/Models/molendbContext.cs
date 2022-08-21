@@ -18,14 +18,14 @@ namespace MolenTaskSolution.Models
 
         public virtual DbSet<FileAttachment> FileAttachments { get; set; } = null!;
         public virtual DbSet<Project> Projects { get; set; } = null!;
-        public virtual DbSet<ProjectUser> ProjectUsers { get; set; } = null!;
         public virtual DbSet<Task> Tasks { get; set; } = null!;
+        public virtual DbSet<User> Users { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=LAPTOP-8U6PSPCB;Database=molendb;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=144.126.158.15,1433;Database=molendb; User ID=administrator; Password=Qwert1234");
             }
         }
 
@@ -57,10 +57,17 @@ namespace MolenTaskSolution.Models
 
                 entity.Property(e => e.ProjectId).HasColumnName("ProjectID");
 
+                entity.Property(e => e.TaskOwnerId).HasColumnName("TaskOwnerID");
+
                 entity.HasOne(d => d.Project)
                     .WithMany(p => p.FileAttachments)
                     .HasForeignKey(d => d.ProjectId)
-                    .HasConstraintName("FK_ProjectID");
+                    .HasConstraintName("FK_tasks_projects_ProjectID");
+
+                entity.HasOne(d => d.TaskOwner)
+                    .WithMany(p => p.FileAttachments)
+                    .HasForeignKey(d => d.TaskOwnerId)
+                    .HasConstraintName("FK_tasks_employess_TaskOwnerID");
             });
 
             modelBuilder.Entity<Project>(entity =>
@@ -92,45 +99,13 @@ namespace MolenTaskSolution.Models
                 entity.HasOne(d => d.ProjectOwner)
                     .WithMany(p => p.Projects)
                     .HasForeignKey(d => d.ProjectOwnerId)
-                    .HasConstraintName("FK_ProjectOwner");
-            });
-
-            modelBuilder.Entity<ProjectUser>(entity =>
-            {
-                entity.HasKey(e => e.UserId)
-                    .HasName("PK__Project___1788CC4CC6FC975C");
-
-                entity.ToTable("Project_Users");
-
-                entity.Property(e => e.UserId).ValueGeneratedNever();
-
-                entity.Property(e => e.DateAdded).HasColumnType("datetime");
-
-                entity.Property(e => e.Email)
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Gender)
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Password)
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Role)
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.UserName)
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .HasConstraintName("FK_projects_employees_ProjectOwner");
             });
 
             modelBuilder.Entity<Task>(entity =>
             {
                 entity.HasKey(e => e.TasksId)
-                    .HasName("PK__Tasks__6DD7897932583E2F");
+                    .HasName("PK__Tasks__6DD78979DC4DC480");
 
                 entity.Property(e => e.TasksId).ValueGeneratedNever();
 
@@ -165,6 +140,35 @@ namespace MolenTaskSolution.Models
                     .WithMany(p => p.Tasks)
                     .HasForeignKey(d => d.TaskOwnerId)
                     .HasConstraintName("FK_TaskOwner");
+            });
+
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.Property(e => e.UserId)
+                    .ValueGeneratedNever()
+                    .HasColumnName("UserID");
+
+                entity.Property(e => e.DateAdded).HasColumnType("datetime");
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Gender)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Role)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);

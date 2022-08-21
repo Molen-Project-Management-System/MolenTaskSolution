@@ -47,13 +47,13 @@
             this.btnSearchTask = new System.Windows.Forms.PictureBox();
             this.searchBoxTask = new System.Windows.Forms.TextBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.projectUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.photoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.projectsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projectUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -303,10 +303,6 @@
             this.dgvUsers.Size = new System.Drawing.Size(1491, 718);
             this.dgvUsers.TabIndex = 45;
             // 
-            // projectUserBindingSource
-            // 
-            this.projectUserBindingSource.DataSource = typeof(MolenTaskSolution.Models.ProjectUser);
-            // 
             // photoDataGridViewImageColumn
             // 
             this.photoDataGridViewImageColumn.DataPropertyName = "Photo";
@@ -349,6 +345,10 @@
             this.projectsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.projectsDataGridViewTextBoxColumn.Name = "projectsDataGridViewTextBoxColumn";
             // 
+            // projectUserBindingSource
+            // 
+            this.projectUserBindingSource.DataSource = typeof(MolenTaskSolution.Models.ProjectUser);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvUsers);
@@ -368,6 +368,7 @@
             this.Controls.Add(this.searchBoxTask);
             this.Name = "Page_Users";
             this.Size = new System.Drawing.Size(1491, 785);
+            this.Load += new System.EventHandler(this.Page_Users_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -401,13 +402,13 @@
         private PictureBox btnSearchTask;
         private TextBox searchBoxTask;
         private DataGridView dgvUsers;
+        private BindingSource projectUserBindingSource;
+        private Panel panel1;
         private DataGridViewImageColumn photoDataGridViewImageColumn;
         private DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn projectsDataGridViewTextBoxColumn;
-        private BindingSource projectUserBindingSource;
-        private Panel panel1;
     }
 }
