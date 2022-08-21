@@ -218,7 +218,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(934, 15);
+            this.button2.Location = new System.Drawing.Point(1173, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 35);
             this.button2.TabIndex = 36;
@@ -232,20 +232,12 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1085, 15);
+            this.button1.Location = new System.Drawing.Point(1324, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 35);
             this.button1.TabIndex = 37;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // projectBindingSource
-            // 
-       
-            // 
-            // taskBindingSource
-            // 
-          
             // 
             // Page_Task
             // 
