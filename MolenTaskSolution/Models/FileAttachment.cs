@@ -7,6 +7,7 @@ namespace MolenTaskSolution.Models
     {
         public int Id { get; set; }
         public int? ProjectId { get; set; }
+        public int? TaskOwnerId { get; set; }
         public string FileName { get; set; } = null!;
         public string? AttachmentType { get; set; }
         public string? Description { get; set; }
@@ -14,5 +15,6 @@ namespace MolenTaskSolution.Models
         public DateTime? DateAdded { get; set; }
 
         public virtual Project? Project { get; set; }
+        public virtual User? TaskOwner { get; set; }
     }
 }

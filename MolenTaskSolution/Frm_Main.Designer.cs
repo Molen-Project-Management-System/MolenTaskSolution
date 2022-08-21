@@ -38,7 +38,6 @@
             this.accountStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.accountStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbUserRole = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
@@ -47,12 +46,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnTasks = new System.Windows.Forms.Button();
+            this.btnProject = new System.Windows.Forms.Button();
             this.lbPageName = new System.Windows.Forms.Label();
-            this.page_Task1 = new MolenTaskSolution.Pages.Page_Task();
+            this.page_TaskFrmMain = new MolenTaskSolution.Pages.Page_Task();
+            this.page_UsersFrmMain = new MolenTaskSolution.Pages.Page_Users();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
@@ -152,15 +152,6 @@
             this.accountStripMenuItem4.Size = new System.Drawing.Size(247, 30);
             this.accountStripMenuItem4.Text = "&Logout";
             // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1789, 849);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -242,85 +233,95 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnLogout);
+            this.groupBox1.Controls.Add(this.btnUsers);
+            this.groupBox1.Controls.Add(this.btnTasks);
+            this.groupBox1.Controls.Add(this.btnProject);
             this.groupBox1.Controls.Add(this.lbPageName);
             this.groupBox1.Location = new System.Drawing.Point(302, 783);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1487, 66);
+            this.groupBox1.Size = new System.Drawing.Size(1499, 66);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navigate";
             // 
-            // button4
+            // btnLogout
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(317, 27);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Log Out";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.Location = new System.Drawing.Point(317, 27);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(94, 29);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnUsers
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(217, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Users";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUsers.Location = new System.Drawing.Point(217, 27);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(94, 29);
+            this.btnUsers.TabIndex = 1;
+            this.btnUsers.Text = "Users";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
-            // button2
+            // btnTasks
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(117, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Tasks";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTasks.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTasks.Location = new System.Drawing.Point(117, 27);
+            this.btnTasks.Name = "btnTasks";
+            this.btnTasks.Size = new System.Drawing.Size(94, 29);
+            this.btnTasks.TabIndex = 1;
+            this.btnTasks.Text = "Tasks";
+            this.btnTasks.UseVisualStyleBackColor = true;
+            this.btnTasks.Click += new System.EventHandler(this.btnTasks_Click);
             // 
-            // button1
+            // btnProject
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(17, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Projects";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnProject.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProject.Location = new System.Drawing.Point(17, 27);
+            this.btnProject.Name = "btnProject";
+            this.btnProject.Size = new System.Drawing.Size(94, 29);
+            this.btnProject.TabIndex = 1;
+            this.btnProject.Text = "Projects";
+            this.btnProject.UseVisualStyleBackColor = true;
             // 
             // lbPageName
             // 
             this.lbPageName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPageName.AutoSize = true;
             this.lbPageName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbPageName.Location = new System.Drawing.Point(1349, 31);
+            this.lbPageName.Location = new System.Drawing.Point(1361, 31);
             this.lbPageName.Name = "lbPageName";
             this.lbPageName.Size = new System.Drawing.Size(126, 20);
             this.lbPageName.TabIndex = 3;
             this.lbPageName.Text = "Page Name Here";
             // 
-            // page_Task1
+            // page_TaskFrmMain
             // 
-            this.page_Task1.Location = new System.Drawing.Point(302, 0);
-            this.page_Task1.Name = "page_Task1";
-            this.page_Task1.Size = new System.Drawing.Size(1497, 785);
-            this.page_Task1.TabIndex = 3;
+            this.page_TaskFrmMain.Location = new System.Drawing.Point(302, 0);
+            this.page_TaskFrmMain.Name = "page_TaskFrmMain";
+            this.page_TaskFrmMain.Size = new System.Drawing.Size(1497, 785);
+            this.page_TaskFrmMain.TabIndex = 3;
+            // 
+            // page_UsersFrmMain
+            // 
+            this.page_UsersFrmMain.Location = new System.Drawing.Point(302, 0);
+            this.page_UsersFrmMain.Name = "page_UsersFrmMain";
+            this.page_UsersFrmMain.Size = new System.Drawing.Size(1509, 785);
+            this.page_UsersFrmMain.TabIndex = 4;
+            this.page_UsersFrmMain.Load += new System.EventHandler(this.page_UsersFrmMain_Load);
             // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1789, 849);
-            this.Controls.Add(this.page_Task1);
+            this.ClientSize = new System.Drawing.Size(1801, 849);
+            this.Controls.Add(this.page_UsersFrmMain);
+            this.Controls.Add(this.page_TaskFrmMain);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Frm_Main";
@@ -348,7 +349,6 @@
         private ToolStripMenuItem accountStripMenuItem3;
         private ToolStripSeparator toolStripSeparator6;
         private ToolStripMenuItem accountStripMenuItem4;
-        private ListView listView1;
         private Panel panel1;
         private Label lbcopyrght;
         private Label label3;
@@ -357,11 +357,12 @@
         private Label lbUserRole;
         private Label lbUserName;
         private GroupBox groupBox1;
-        private Button button1;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button btnProject;
+        private Button btnLogout;
+        private Button btnUsers;
+        private Button btnTasks;
         private Label lbPageName;
-        private Pages.Page_Task page_Task1;
+        private Pages.Page_Task page_TaskFrmMain;
+        private Pages.Page_Users page_UsersFrmMain;
     }
 }

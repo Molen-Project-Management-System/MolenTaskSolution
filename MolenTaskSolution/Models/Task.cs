@@ -16,6 +16,6 @@ namespace MolenTaskSolution.Models
         public DateTime? DateAdded { get; set; }
 
         public virtual Project? Project { get; set; }
-        public virtual ProjectUser? TaskOwner { get; set; }
+        public virtual User? TaskOwner { get; set; }
     }
 }
