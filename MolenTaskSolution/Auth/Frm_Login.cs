@@ -16,5 +16,12 @@ namespace MolenTaskSolution.Auth
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Frm_Main openMainForm = new Frm_Main();
+            openMainForm.Show();
+            this.Hide();
+        }
     }
 }

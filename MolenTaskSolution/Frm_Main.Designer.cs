@@ -254,6 +254,7 @@
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Log Out";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnUsers
             // 
@@ -309,7 +310,7 @@
             // 
             this.page_UsersFrmMain.Location = new System.Drawing.Point(302, 0);
             this.page_UsersFrmMain.Name = "page_UsersFrmMain";
-            this.page_UsersFrmMain.Size = new System.Drawing.Size(1509, 785);
+            this.page_UsersFrmMain.Size = new System.Drawing.Size(1504, 785);
             this.page_UsersFrmMain.TabIndex = 4;
             this.page_UsersFrmMain.Load += new System.EventHandler(this.page_UsersFrmMain_Load);
             // 
