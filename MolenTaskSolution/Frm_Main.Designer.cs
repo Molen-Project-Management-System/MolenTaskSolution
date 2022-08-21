@@ -40,6 +40,7 @@
             this.accountStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMainLogin = new System.Windows.Forms.Button();
             this.lbUserRole = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.pbUser = new System.Windows.Forms.PictureBox();
@@ -70,9 +71,10 @@
             this.usersToolStripMenuItem,
             this.accountStripMenuItem1});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(7, 357);
+            this.menuStrip1.Location = new System.Drawing.Point(6, 268);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(283, 206);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(248, 154);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -132,30 +134,31 @@
             // accountStripMenuItem2
             // 
             this.accountStripMenuItem2.Name = "accountStripMenuItem2";
-            this.accountStripMenuItem2.Size = new System.Drawing.Size(247, 30);
+            this.accountStripMenuItem2.Size = new System.Drawing.Size(198, 24);
             this.accountStripMenuItem2.Text = "&My Profile";
             // 
             // accountStripMenuItem3
             // 
             this.accountStripMenuItem3.Name = "accountStripMenuItem3";
-            this.accountStripMenuItem3.Size = new System.Drawing.Size(247, 30);
+            this.accountStripMenuItem3.Size = new System.Drawing.Size(198, 24);
             this.accountStripMenuItem3.Text = "&Change Password";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(244, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(195, 6);
             // 
             // accountStripMenuItem4
             // 
             this.accountStripMenuItem4.Name = "accountStripMenuItem4";
-            this.accountStripMenuItem4.Size = new System.Drawing.Size(247, 30);
+            this.accountStripMenuItem4.Size = new System.Drawing.Size(198, 24);
             this.accountStripMenuItem4.Text = "&Logout";
             // 
             // listView1
             // 
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1789, 849);
             this.listView1.TabIndex = 2;
@@ -165,6 +168,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Controls.Add(this.btnMainLogin);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.lbUserRole);
             this.panel1.Controls.Add(this.lbUserName);
@@ -173,27 +177,39 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 849);
             this.panel1.TabIndex = 1;
+            // 
+            // btnMainLogin
+            // 
+            this.btnMainLogin.Location = new System.Drawing.Point(66, 489);
+            this.btnMainLogin.Name = "btnMainLogin";
+            this.btnMainLogin.Size = new System.Drawing.Size(79, 28);
+            this.btnMainLogin.TabIndex = 4;
+            this.btnMainLogin.Text = "LOGOUT";
+            this.btnMainLogin.UseVisualStyleBackColor = true;
+            this.btnMainLogin.Click += new System.EventHandler(this.btnMainLogin_Click);
             // 
             // lbUserRole
             // 
             this.lbUserRole.AutoSize = true;
             this.lbUserRole.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbUserRole.Location = new System.Drawing.Point(119, 174);
+            this.lbUserRole.Location = new System.Drawing.Point(104, 130);
             this.lbUserRole.Name = "lbUserRole";
-            this.lbUserRole.Size = new System.Drawing.Size(60, 23);
+            this.lbUserRole.Size = new System.Drawing.Size(50, 19);
             this.lbUserRole.TabIndex = 3;
             this.lbUserRole.Text = "Admin";
+            this.lbUserRole.Click += new System.EventHandler(this.lbUserRole_Click);
             // 
             // lbUserName
             // 
             this.lbUserName.AutoSize = true;
             this.lbUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbUserName.Location = new System.Drawing.Point(63, 143);
+            this.lbUserName.Location = new System.Drawing.Point(55, 107);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(180, 31);
+            this.lbUserName.Size = new System.Drawing.Size(150, 25);
             this.lbUserName.TabIndex = 3;
             this.lbUserName.Text = "Ramazan Bulbul";
             // 
@@ -201,9 +217,10 @@
             // 
             this.pbUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbUser.Image = ((System.Drawing.Image)(resources.GetObject("pbUser.Image")));
-            this.pbUser.Location = new System.Drawing.Point(86, 12);
+            this.pbUser.Location = new System.Drawing.Point(75, 9);
+            this.pbUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbUser.Name = "pbUser";
-            this.pbUser.Size = new System.Drawing.Size(128, 128);
+            this.pbUser.Size = new System.Drawing.Size(112, 96);
             this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUser.TabIndex = 3;
             this.pbUser.TabStop = false;
@@ -215,7 +232,7 @@
             this.lbcopyrght.AutoSize = true;
             this.lbcopyrght.Location = new System.Drawing.Point(86, 810);
             this.lbcopyrght.Name = "lbcopyrght";
-            this.lbcopyrght.Size = new System.Drawing.Size(104, 20);
+            this.lbcopyrght.Size = new System.Drawing.Size(82, 15);
             this.lbcopyrght.TabIndex = 3;
             this.lbcopyrght.Text = "© Molen 2022";
             // 
@@ -225,16 +242,16 @@
             this.label3.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.label3.Location = new System.Drawing.Point(12, 783);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(278, 2);
+            this.label3.Size = new System.Drawing.Size(243, 2);
             this.label3.TabIndex = 3;
             this.label3.Text = "label1";
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label1.Location = new System.Drawing.Point(12, 240);
+            this.label1.Location = new System.Drawing.Point(10, 180);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 2);
+            this.label1.Size = new System.Drawing.Size(243, 2);
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
             // 
@@ -314,7 +331,7 @@
             // 
             // Frm_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1789, 849);
             this.Controls.Add(this.page_Task1);
@@ -323,6 +340,7 @@
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MolenTaskSolution";
