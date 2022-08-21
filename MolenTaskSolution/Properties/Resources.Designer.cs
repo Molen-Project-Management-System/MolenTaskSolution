@@ -59,15 +59,5 @@ namespace MolenTaskSolution.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap de_molen {
-            get {
-                object obj = ResourceManager.GetObject("de molen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
