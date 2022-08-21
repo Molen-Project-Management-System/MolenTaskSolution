@@ -1,5 +1,7 @@
+
 using MolenTaskSolution.Models;
 using System.Data.SqlClient;
+using System;
 
 namespace MolenTaskSolution
 {
@@ -12,6 +14,7 @@ namespace MolenTaskSolution
         {
             InitializeComponent();
         }
+
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
@@ -27,8 +30,17 @@ namespace MolenTaskSolution
         private void page_UsersFrmMain_Load(object sender, EventArgs e)
         {
             
-            
 
+        private void lbUserRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void btnMainLogin_Click(object sender, EventArgs e)
+        {
+
+            new Login().Show();
 
         }
     }
