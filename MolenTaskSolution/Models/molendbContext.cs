@@ -25,7 +25,7 @@ namespace MolenTaskSolution.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("");
+                optionsBuilder.UseSqlServer("Server=144.126.158.15,1433;Database=molendb; User ID=administrator; Password=Qwert1234");
             }
         }
 

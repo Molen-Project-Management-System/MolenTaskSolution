@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using MolenTaskSolution.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +12,10 @@ using System.Windows.Forms;
 
 namespace MolenTaskSolution.Auth
 {
+    
     public partial class Frm_Login : Form
     {
+        molendbContext userdb = new molendbContext();
         public Frm_Login()
         {
             InitializeComponent();
@@ -19,9 +23,43 @@ namespace MolenTaskSolution.Auth
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Frm_Main openMainForm = new Frm_Main();
-            openMainForm.Show();
-            this.Hide();
+
+            IEnumerable<String> emails = from p in userdb.Users
+            select p.Email;
+
+
+            IEnumerable<String> passwords = from p in userdb.Users
+                                            select p.Password;
+
+
+            Boolean isEmail = false;
+            foreach (String email in emails)
+            {
+                if (email == textBoxEmail.Text)
+
+                    isEmail = true;
+
+
+
+
+            }
+
+            Boolean isPassword = false;
+            foreach (String password in passwords)
+            {
+                if (password == textBoxPassword.Text)
+                    isPassword = true;
+
+            }
+
+            if (isEmail == true && isPassword == true)
+            {
+                new Frm_Main().Show();
+                this.Hide();
+            }
+            else MessageBox.Show("Please enter valid email and password");
+
+          
         }
     }
 }
