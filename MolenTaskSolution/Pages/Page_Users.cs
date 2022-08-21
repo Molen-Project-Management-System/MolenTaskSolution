@@ -1,5 +1,4 @@
-﻿using MolenTaskSolution.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +20,7 @@ namespace MolenTaskSolution.Pages
 
         private void Page_Users_Load(object sender, EventArgs e)
         {
-            molendbContext userdb = new molendbContext();
+          
 
         }
     }

@@ -46,22 +46,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnSearchTask = new System.Windows.Forms.PictureBox();
             this.searchBoxTask = new System.Windows.Forms.TextBox();
-            this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.photoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.projectsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.projectUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchTask)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectUserBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -275,93 +265,10 @@
             this.searchBoxTask.TabIndex = 38;
             this.searchBoxTask.Text = "Search..";
             // 
-            // dgvUsers
-            // 
-            this.dgvUsers.AllowUserToAddRows = false;
-            this.dgvUsers.AllowUserToDeleteRows = false;
-            this.dgvUsers.AllowUserToOrderColumns = true;
-            this.dgvUsers.AutoGenerateColumns = false;
-            this.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUsers.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvUsers.ColumnHeadersHeight = 30;
-            this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.photoDataGridViewImageColumn,
-            this.userNameDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.roleDataGridViewTextBoxColumn,
-            this.projectsDataGridViewTextBoxColumn});
-            this.dgvUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvUsers.DataSource = this.projectUserBindingSource;
-            this.dgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUsers.Location = new System.Drawing.Point(0, 0);
-            this.dgvUsers.MultiSelect = false;
-            this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.RowHeadersWidth = 51;
-            this.dgvUsers.RowTemplate.Height = 29;
-            this.dgvUsers.Size = new System.Drawing.Size(1491, 718);
-            this.dgvUsers.TabIndex = 45;
-            // 
-            // photoDataGridViewImageColumn
-            // 
-            this.photoDataGridViewImageColumn.DataPropertyName = "Photo";
-            this.photoDataGridViewImageColumn.HeaderText = "Photo";
-            this.photoDataGridViewImageColumn.MinimumWidth = 6;
-            this.photoDataGridViewImageColumn.Name = "photoDataGridViewImageColumn";
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // roleDataGridViewTextBoxColumn
-            // 
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
-            this.roleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            // 
-            // projectsDataGridViewTextBoxColumn
-            // 
-            this.projectsDataGridViewTextBoxColumn.DataPropertyName = "Projects";
-            this.projectsDataGridViewTextBoxColumn.HeaderText = "Projects";
-            this.projectsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.projectsDataGridViewTextBoxColumn.Name = "projectsDataGridViewTextBoxColumn";
-            // 
-            // projectUserBindingSource
-            // 
-            this.projectUserBindingSource.DataSource = typeof(MolenTaskSolution.Models.ProjectUser);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgvUsers);
-            this.panel1.Location = new System.Drawing.Point(0, 67);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1491, 718);
-            this.panel1.TabIndex = 46;
-            // 
             // Page_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnSearchTask);
@@ -375,9 +282,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchTask)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectUserBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,14 +306,6 @@
         private Button button4;
         private PictureBox btnSearchTask;
         private TextBox searchBoxTask;
-        private DataGridView dgvUsers;
         private BindingSource projectUserBindingSource;
-        private Panel panel1;
-        private DataGridViewImageColumn photoDataGridViewImageColumn;
-        private DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn projectsDataGridViewTextBoxColumn;
     }
 }

@@ -241,11 +241,11 @@
             // 
             // projectBindingSource
             // 
-            this.projectBindingSource.DataSource = typeof(MolenTaskSolution.Models.Project);
+       
             // 
             // taskBindingSource
             // 
-            this.taskBindingSource.DataSource = typeof(MolenTaskSolution.Models.Task);
+          
             // 
             // Page_Task
             // 

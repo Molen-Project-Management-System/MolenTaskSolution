@@ -25,7 +25,7 @@ namespace MolenTaskSolution.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=144.126.158.15,1433;Database=molendb; User ID=administrator; Password=Qwert1234");
+                optionsBuilder.UseSqlServer(");
             }
         }
 
@@ -105,7 +105,7 @@ namespace MolenTaskSolution.Models
             modelBuilder.Entity<Task>(entity =>
             {
                 entity.HasKey(e => e.TasksId)
-                    .HasName("PK__Tasks__6DD78979DC4DC480");
+                    .HasName("PK__Tasks__6DD78979AB1411EE");
 
                 entity.Property(e => e.TasksId).ValueGeneratedNever();
 
