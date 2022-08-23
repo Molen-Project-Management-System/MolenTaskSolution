@@ -61,5 +61,10 @@ namespace MolenTaskSolution.Auth
 
           
         }
+
+        private void Frm_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
